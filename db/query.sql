@@ -17,4 +17,9 @@ SELECT * FROM employee;
 INSERT INTO employee (first_name, last_name, role_id, manager_id) 
 VALUES ("Anthony", "Smith", 2, 1);
 -- QUERY TO UPDATE EMPLOYEE ROLE
+SELECT employee.id , employee.first_name, employee.last_name, roles.id AS role_id
+FROM employee, roles, department
+WHERE department.id = roles.department_id 
+AND roles.id = employee.role_id;
 
+SELECT roles.id, roles.title FROM roles;
