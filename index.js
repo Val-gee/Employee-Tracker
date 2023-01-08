@@ -18,7 +18,7 @@ function viewEmployees() {
 
 //function to add an employee
 askEmployee = () => {
-  const sql = `SELECT em FROM employee`;
+  const sql = `SELECT * FROM employee`;
 
   connect.promise().query(sql)
     .then(([rows]) => {
